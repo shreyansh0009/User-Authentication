@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      // This clears all inputs when the page loads or reloads
+      window.addEventListener('load', () => {
+        document.querySelector('form').reset();
+      });
+    </script>
+    
+  </head>
+  <body class="bg-zinc-800 text-white">
+    <div class="w-full h-screen flex flex-col items-center space-y-5">
+      <h1 class="text-5xl mt-8">Users App</h1>
+
+      <div class="w-full max-w-md">
+        <form method="post" action="/create" class="flex flex-col space-y-4">
+          <h2 class="text-xl">Username</h2>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+            class="p-2 rounded text-black"
+          />
+          <h2 class="text-xl">Email</h2>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Email"
+            class="p-2 rounded text-black"
+          />
+          <h2 class="text-xl">Password</h2>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            class="p-2 rounded text-black"
+          />
+          <button class="bg-blue-600 h-12 rounded-md font-bold text-lg">
+            Create User
+          </button>
+
+          <a href="/login" class="text-md text-blue-400 flex justify-center font-semibold">Already user? Login</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
